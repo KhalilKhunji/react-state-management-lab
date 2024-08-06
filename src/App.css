@@ -7,3 +7,23 @@ li {
   list-style: none;
   margin: 10px;
 }
+
+.money {
+  display: flex;
+  justify-content: center;
+}
+
+.teamMsg {
+  display: flex;
+  justify-content: center;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+}
+
+.totalStrength {
+  display: flex;
+  justify-content: center;
+}
