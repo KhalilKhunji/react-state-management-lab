@@ -111,11 +111,12 @@ const App = () => {
 
   return (
     <>
-      <h4 className="money">Money: ${money}</h4>
-      <h4 className="totals">Total Strength: {totalStrength}</h4>
-      <h4 className="totals">Total Agility: {totalAgility}</h4>
-      <h1 className="teamMsg">{team.length === 0 ? 'Pick some team members!' : ''}</h1>
-      <h3 className="team">Team</h3>
+      <h1 className="center">Zombie Fighters</h1>
+      <h4 className="center">Money: ${money}</h4>
+      <h4 className="center">Total Strength: {totalStrength}</h4>
+      <h4 className="center">Total Agility: {totalAgility}</h4>
+      <h1 className="center">{team.length === 0 ? 'Pick some team members!' : ''}</h1>
+      <h3 className="center">Team</h3>
       <ul>
         {team.map((fighter, index) => (
           <li key={index}>
@@ -124,7 +125,7 @@ const App = () => {
           </li>
         ))}
       </ul>
-      <h3 className="fighters">Fighters</h3>
+      <h3 className="center">Fighters</h3>
       <ul>
         {zombieFighters.map((fighter, index) => (
           <li key={index}>

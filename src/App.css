@@ -8,27 +8,7 @@ li {
   margin: 10px;
 }
 
-.money {
-  display: flex;
-  justify-content: center;
-}
-
-.teamMsg {
-  display: flex;
-  justify-content: center;
-}
-
-.team {
-  display: flex;
-  justify-content: center;
-}
-
-.totals {
-  display: flex;
-  justify-content: center;
-}
-
-.fighters {
+.center {
   display: flex;
   justify-content: center;
 }
