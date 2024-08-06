@@ -93,13 +93,13 @@ const App = () => {
     };
   };
 
-  const handleRemoveFighter = (fighter) => {
-    const memberCount = team.filter((member) => member === fighter);
-    const newTeam = team.filter((member) => member !== fighter);
+  const handleRemoveFighter = (fighter, index) => {
+    const newTeam = [...team];
+    newTeam.splice(index, 1);
     setTeam(newTeam);
-    const refund = money + (memberCount.length * fighter.price);
+    const refund = money + fighter.price;
     setMoney(refund);
-    addTotals((-memberCount.length * fighter.strength),(-memberCount.length * fighter.agility));
+    addTotals(-fighter.strength, -fighter.agility);
   };
 
   const addTotals = (strength, agility) => {
@@ -121,7 +121,7 @@ const App = () => {
         {team.map((fighter, index) => (
           <li key={index}>
             <ZombieFighter fighter={fighter} />
-            <button onClick={() => {handleRemoveFighter(fighter)}}>Remove from Team</button>
+            <button onClick={() => {handleRemoveFighter(fighter, index)}}>Remove from Team</button>
           </li>
         ))}
       </ul>
